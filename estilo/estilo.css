@@ -1,0 +1,339 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    font-family: "Trebuchet MS", tahoma;
+    
+}
+
+#topo {
+    width: 100%;
+    height: 135px;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#conteudoTopo {
+    box-sizing: border-box;
+    max-width: 980px;
+    width: 100%;
+    height: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background-color: #036;  
+}
+
+#logo {
+    width: 181px;
+    height: 73px;
+}
+
+#nav.active #hamburguer {
+    border-top-color: transparent;
+}
+
+#nav.active #hamburguer::before {
+    transform: rotate(135deg);
+}
+
+#nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+}
+
+#btnMobile {
+    display: flex;
+    padding: 00.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 677px) {
+    #btnMobile {
+        display: none;
+    }
+}
+
+#hamburguer {
+    width: 20px;
+    border-top: 2px solid;
+    display: inline-block;
+}
+
+#hamburguer::after, #hamburguer::before  {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+}
+
+#menu {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+#menu a {
+    display: block;
+    font-family: tahoma;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all 0.1s ease-in-out;
+}
+
+#menu a:hover {
+    background-color: #eee;
+    box-shadow: 0px 0px 6px 1px #fff;
+    border-radius: 5px;
+    color: #333;
+}
+
+@media screen and (max-width: 676px) {
+    #btnMobile {
+        display: block;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 118px;
+        right: 0px;
+        background-color: #036;
+        transition: 0.6s;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+        z-index: 1000; 
+    }
+
+    #nav.active #menu {
+        visibility: visible;
+        height: 260%;
+        overflow-y: auto;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        background-color: #666;
+        border: 1px solid #fff;
+        text-align: center;
+        margin-top: 6px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    nav#menu a {
+        margin: 0 10px;
+    }
+
+    section#logo {
+        width: 160px;
+        height: auto;
+        padding-left: 20px;
+    }
+    
+    section#logo img {
+        width: 100%;
+    }
+
+}
+
+#banner {
+    width: 100%;
+}
+
+#banner img {
+    width: 100%;
+}
+
+#box {
+    box-sizing: border-box;
+    max-width: 980px;
+    width: 98%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #003366;
+    clear: both;
+    padding: 1.0% 2%;
+    text-align: center;
+}
+
+#box h1 {
+    font-family: tahoma;
+    font-size: 22px;
+    color: #fff;
+    margin: 0;
+}
+
+#box p {
+    color: #fff;
+    font-size: 14px;
+}
+
+#container {
+    max-width: 980px;
+    width: 100%;
+    height: auto;
+    margin: 20px auto 0 auto;
+}
+
+#container p {
+    font-size: 12px;
+    color: #666;
+    line-height: 16px;
+}
+
+#box1, #box2, #box3, #box4 {
+    width: 20%;
+    height: auto;
+    margin: auto;
+    float: left;
+    margin-right: 2.0%;
+    margin-left: 2.7%;
+}
+
+#box4 {
+    margin-right: 0;
+}
+
+#box1 img, #box2 img, #box3 img, #box4 img {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px){
+    #box {
+        padding: 10 10px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 997px) {
+    #box {
+        padding: 10 10px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #box {
+        padding: 10 10px;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #box h1, p {
+        margin: 0 1%;
+        margin-bottom: 1%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #box1, #box2, #box3, #box4 {
+        width: 40%;
+        margin: 0px 0px 10px 0px;
+        margin-right: 4.0%;
+        margin-left: 4.0%;
+    }
+
+    #box2, #box4 {
+        float: right;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    #container, #box1, #box2, #box3, #box4 {
+        width: 300px;
+        height: auto;
+        margin: auto;
+    }
+
+    #box1 img, #box2 img {
+        width: 100%;
+        height: auto;
+    }
+
+    #box2, #box4 {
+        float: none;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    #box1 .btn, #box2 .btn, #box3 .btn, #box4 .btn {
+        margin: 10px 0px;
+    }
+}
+
+h2 {
+    font-family: tahoma;
+    font-size: 18px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+input[type=text] {
+    width: 98%;
+    height: 30px;
+    background-color: #ccc;
+    border: none;
+    margin-bottom: 5px;
+    outline-style: none;
+}
+
+form {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+    background-color: #036;
+    text-decoration: none;
+    padding: 6px 0px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(11, 90, 11);
+    box-shadow: 6px 6px 6px 2px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    background-color: #222;
+    float: right;
+    text-align: center;
+    color: #ccc;
+    font-size: 12px;
+    margin-top: 50px;
+}
