@@ -264,6 +264,7 @@ body {
         width: 300px;
         height: auto;
         margin: auto;
+        margin-top: 10px;
     }
 
     #box1 img, #box2 img {
